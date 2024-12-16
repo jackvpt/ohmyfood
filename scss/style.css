@@ -1,0 +1,328 @@
+/* =========================================== */
+/* VARIABLES */
+/* =========================================== */
+* {
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+html {
+  background-color: #f6f6f6;
+  max-width: 1440px;
+  margin: auto;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+header h1 {
+  font-family: "Shrikhand", cursive;
+  height: 63px;
+  align-content: center;
+  color: #101010;
+}
+@media (min-width: 768px) {
+  header h1 {
+    height: 96px;
+  }
+}
+header .header__location {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 17px;
+  height: 63px;
+  background-color: #eaeaea;
+  color: #353535;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
+}
+@media (min-width: 768px) {
+  header .header__location {
+    height: 50px;
+    box-shadow: none;
+  }
+}
+header .header__location p {
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #eaeaea;
+}
+
+.introduction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+@media (min-width: 768px) {
+  .introduction {
+    padding: 30px 10px;
+  }
+}
+.introduction h2 {
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 12px;
+}
+@media (min-width: 768px) {
+  .introduction h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+}
+.introduction h3 {
+  font-size: 18px;
+  font-weight: 300;
+  color: #353535;
+  text-align: center;
+}
+.introduction__button {
+  margin-top: 30px;
+  padding: 0 20px;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 50px;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  align-content: center;
+  border-radius: 25px;
+  color: white;
+  background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
+}
+.introduction__button:hover {
+  cursor: pointer;
+  background: linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%), linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.3490196078);
+}
+
+.functioning {
+  padding: 50px 20px 70px 30px;
+  background-color: white;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .functioning {
+    padding: 50px 50px 70px;
+  }
+}
+@media (min-width: 1024px) {
+  .functioning {
+    padding: 50px 180px 70px 180px;
+  }
+}
+.functioning h2 {
+  font-size: 24px;
+  font-weight: 700;
+  background-color: white;
+  margin-bottom: 30px;
+}
+.functioning__buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  background-color: white;
+}
+@media (min-width: 768px) {
+  .functioning__buttons {
+    flex-direction: row;
+    gap: 35px;
+  }
+}
+.functioning__button {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 72px;
+  padding: 0 20px;
+  border-radius: 20px;
+  background-color: #f6f6f6;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
+  position: relative;
+}
+.functioning__button__number {
+  position: absolute;
+  translate: -32px 0;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+  background-color: #9356dc;
+  align-content: center;
+  text-align: center;
+}
+.functioning__button i {
+  color: #7e7e7e;
+  font-size: 24px;
+  margin-left: 15px;
+}
+.functioning__button .purple {
+  color: #9356dc;
+}
+.functioning__button h3 {
+  font-size: 16px;
+  font-weight: 500;
+  margin-left: 15px;
+}
+
+.restaurants {
+  padding: 50px 20px 70px;
+  background-color: #f6f6f6;
+}
+.restaurants h2 {
+  margin-bottom: 20px;
+}
+.restaurants__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.restaurants__cards .card-menu {
+  border-radius: 20px;
+  background-color: white;
+  position: relative;
+}
+@media (min-width: 768px) {
+  .restaurants__cards .card-menu {
+    width: 45%;
+  }
+}
+.restaurants__cards .card-menu img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 200px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.restaurants__cards .card-menu__new {
+  position: absolute;
+  top: 13px;
+  right: 13px;
+  align-content: center;
+  text-align: center;
+  width: 80px;
+  height: 30px;
+  border-radius: 2px;
+  background-color: #99e2d0;
+  font-size: 14px;
+  font-weight: 500;
+  color: #008766;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
+}
+.restaurants__cards .card-menu__content {
+  position: relative;
+  padding: 15px;
+}
+.restaurants__cards .card-menu__content h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.restaurants__cards .card-menu__content h4 {
+  font-size: 17px;
+  font-weight: 300;
+}
+.restaurants__cards .card-menu__favorite {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  translate: 0 -50%;
+  font-size: 24px;
+  font-weight: 100;
+}
+@media (min-width: 768px) {
+  .restaurants__cards {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+}
+@media (min-width: 1024px) {
+  .restaurants {
+    padding: 50px 180px 70px 180px;
+  }
+}
+
+.footer {
+  padding: 20px;
+  background-color: #353535;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+@media (min-width: 768px) {
+  .footer {
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    gap: 40px;
+    padding: 50px 20px 30px;
+  }
+}
+@media (min-width: 1024px) {
+  .footer {
+    justify-content: flex-end;
+  }
+}
+.footer__logo {
+  font-family: "Shrikhand", cursive;
+  font-size: 18px;
+  font-weight: 400;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+@media (min-width: 768px) {
+  .footer__logo {
+    order: 1;
+    margin: 0 40px;
+  }
+}
+.footer__links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 500;
+}
+@media (min-width: 1024px) {
+  .footer__links {
+    flex-direction: row;
+  }
+}
+.footer__info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 400;
+}
+@media (min-width: 1024px) {
+  .footer__info {
+    flex-direction: row;
+  }
+}
+.footer__link {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}/*# sourceMappingURL=style.css.map */

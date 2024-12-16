@@ -1,0 +1,338 @@
+@use "./variables.scss";
+
+* {
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+html {
+  background-color: #f6f6f6;
+  max-width: 1440px;
+  margin: auto;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    font-family: "Shrikhand", cursive;
+    height: 63px;
+    align-content: center;
+    color: #101010;
+
+    @media (min-width: variables.$breakpoint-tablet) {
+      height: 96px;
+    }
+  }
+
+  .header__location {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 17px;
+    height: 63px;
+    background-color: #eaeaea;
+    color: #353535;
+    box-shadow: 0px 4px 4px 0px #00000040;
+
+    @media (min-width: variables.$breakpoint-tablet) {
+      height: 50px;
+      box-shadow: none;
+    }
+
+    p {
+      font-size: 16px;
+      font-weight: 500;
+      background-color: #eaeaea;
+    }
+  }
+}
+
+.introduction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+
+  @media (min-width: variables.$breakpoint-tablet) {
+    padding: 30px 10px;
+  }
+
+  h2 {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 12px;
+
+    @media (min-width: variables.$breakpoint-tablet) {
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+  }
+
+  h3 {
+    font-size: 18px;
+    font-weight: 300;
+    color: #353535;
+    text-align: center;
+  }
+
+  &__button {
+    margin-top: 30px;
+    padding: 0 20px;
+    width: fit-content;
+    height: 50px;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    align-content: center;
+    border-radius: 25px;
+    color: white;
+    background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
+    box-shadow: 0px 4px 10px 0px #00000040;
+
+    &:hover {
+      cursor: pointer;
+      background: linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%),
+        linear-gradient(
+          0deg,
+          rgba(255, 255, 255, 0.15),
+          rgba(255, 255, 255, 0.15)
+        );
+      box-shadow: 0px 4px 15px 0px #00000059;
+    }
+  }
+}
+
+.functioning {
+  padding: 50px 20px 70px 30px;
+  background-color: white;
+
+  @media (min-width: variables.$breakpoint-tablet) and (max-width: variables.$breakpoint-desktop) {
+    padding: 50px 50px 70px;
+  }
+
+  @media (min-width: variables.$breakpoint-desktop) {
+    padding: 50px 180px 70px 180px;
+  }
+
+  h2 {
+    font-size: 24px;
+    font-weight: 700;
+    background-color: white;
+    margin-bottom: 30px;
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    background-color: white;
+
+    @media (min-width: variables.$breakpoint-tablet) {
+      flex-direction: row;
+      gap: 35px;
+    }
+  }
+  &__button {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 72px;
+    padding: 0 20px;
+    border-radius: 20px;
+    background-color: #f6f6f6;
+    box-shadow: 0px 4px 15px 0px #00000026;
+    position: relative;
+
+    &__number {
+      position: absolute;
+      translate: -32px 0;
+      color: white;
+      font-size: 14px;
+      font-weight: 500;
+      width: 24px;
+      height: 24px;
+      border-radius: 12px;
+      background-color: variables.$color_icon;
+      align-content: center;
+      text-align: center;
+    }
+
+    i {
+      color: #7e7e7e;
+      font-size: 24px;
+      margin-left: 15px;
+    }
+    .purple {
+      color: variables.$color_icon;
+    }
+
+    h3 {
+      font-size: 16px;
+      font-weight: 500;
+      margin-left: 15px;
+    }
+  }
+}
+
+.restaurants {
+  padding: 50px 20px 70px;
+  background-color: variables.$color_background;
+
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  &__cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .card-menu {
+      border-radius: 20px;
+      background-color: white;
+      position: relative;
+
+      @media (min-width: variables.$breakpoint-tablet) {
+        width: 45%;
+      }
+
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: 200px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+      }
+
+      &__new {
+        position: absolute;
+        top: 13px;
+        right: 13px;
+        align-content: center;
+        text-align: center;
+        width: 80px;
+        height: 30px;
+        border-radius: 2px;
+        background-color: #99e2d0;
+        font-size: 14px;
+        font-weight: 500;
+        color: #008766;
+        box-shadow: 0px 2px 4px 0px #00000026;
+      }
+
+      &__content {
+        position: relative;
+        padding: 15px;
+
+        h3 {
+          font-size: 18px;
+          font-weight: 700;
+          margin-bottom: 5px;
+        }
+
+        h4 {
+          font-size: 17px;
+          font-weight: 300;
+        }
+      }
+      &__favorite {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        translate: 0 -50%;
+        font-size: 24px;
+        font-weight: 100;
+      }
+    }
+    @media (min-width: variables.$breakpoint-tablet) {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+  }
+  @media (min-width: variables.$breakpoint-desktop) {
+    padding: 50px 180px 70px 180px;
+  }
+}
+
+.footer {
+  padding: 20px;
+  background-color: #353535;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  @media (min-width: variables.$breakpoint-tablet) {
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    gap: 40px;
+    padding: 50px 20px 30px;
+  }
+
+  @media (min-width: variables.$breakpoint-desktop) {
+    justify-content: flex-end;
+  }
+
+  &__logo {
+    font-family: "Shrikhand", cursive;
+    font-size: 18px;
+    font-weight: 400;
+    font-style: italic;
+    margin-bottom: 10px;
+
+    @media (min-width: variables.$breakpoint-tablet) {
+      order: 1;
+      margin: 0 40px;
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: 500;
+
+    @media (min-width: variables.$breakpoint-desktop) {
+      flex-direction: row;
+    }
+
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: 400;
+
+    @media (min-width: variables.$breakpoint-desktop) {
+      flex-direction: row;
+    }
+  }
+
+  &__link {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+}
