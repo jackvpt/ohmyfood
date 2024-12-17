@@ -1,0 +1,26 @@
+// /* Gradient */
+// @mixin gradient ($orientation: $degree) {
+//     background: linear-gradient($orientation, $color-secondary, $color-primary);
+// }
+
+// /* Shadow */
+// @mixin object-shadow ($color: $shadow) {
+//     box-shadow: 0px 5px 8px $color;
+// }
+
+// @mixin circle {
+//     border-radius: 50%;
+// }
+
+/* Responsive */
+@mixin tablet-responsive {
+    @media all and (min-width: map-get($breakpoints, tablet)) {
+        @content;
+    }
+}
+
+@mixin desktop-responsive {
+    @media all and (min-width: map-get($breakpoints, desktop)) {
+        @content;
+    }
+}

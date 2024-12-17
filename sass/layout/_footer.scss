@@ -1,0 +1,63 @@
+.footer {
+  padding: 20px;
+  background-color: #353535;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  @include tablet-responsive {
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    gap: 40px;
+    padding: 50px 20px 30px;
+  }
+
+  @include desktop-responsive {
+    justify-content: flex-end;
+  }
+
+  &__logo {
+    font-family: "Shrikhand", cursive;
+    font-size: 18px;
+    font-weight: 400;
+    font-style: italic;
+    margin-bottom: 10px;
+
+    @include tablet-responsive {
+      order: 1;
+      margin: 0 40px;
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: 500;
+
+    @include desktop-responsive {
+      flex-direction: row;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: 400;
+
+    @include desktop-responsive {
+      flex-direction: row;
+    }
+  }
+
+  &__link {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+}

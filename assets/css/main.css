@@ -1,6 +1,6 @@
-/* =========================================== */
-/* VARIABLES */
-/* =========================================== */
+/* Colors */
+/* Responsive */
+/* Responsive */
 * {
   font-family: "Roboto", sans-serif;
   box-sizing: border-box;
@@ -31,7 +31,7 @@ header h1 {
   align-content: center;
   color: #101010;
 }
-@media (min-width: 768px) {
+@media all and (min-width: 768px) {
   header h1 {
     height: 96px;
   }
@@ -48,7 +48,7 @@ header .header__location {
   color: #353535;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
 }
-@media (min-width: 768px) {
+@media all and (min-width: 768px) {
   header .header__location {
     height: 50px;
     box-shadow: none;
@@ -60,13 +60,78 @@ header .header__location p {
   background-color: #eaeaea;
 }
 
+.footer {
+  padding: 20px;
+  background-color: #353535;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+@media all and (min-width: 768px) {
+  .footer {
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    gap: 40px;
+    padding: 50px 20px 30px;
+  }
+}
+@media all and (min-width: 1024px) {
+  .footer {
+    justify-content: flex-end;
+  }
+}
+.footer__logo {
+  font-family: "Shrikhand", cursive;
+  font-size: 18px;
+  font-weight: 400;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+@media all and (min-width: 768px) {
+  .footer__logo {
+    order: 1;
+    margin: 0 40px;
+  }
+}
+.footer__links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 500;
+}
+@media all and (min-width: 1024px) {
+  .footer__links {
+    flex-direction: row;
+  }
+}
+.footer__info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 400;
+}
+@media all and (min-width: 1024px) {
+  .footer__info {
+    flex-direction: row;
+  }
+}
+.footer__link {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
 .introduction {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 40px 20px;
 }
-@media (min-width: 768px) {
+@media all and (min-width: 768px) {
   .introduction {
     padding: 30px 10px;
   }
@@ -77,7 +142,7 @@ header .header__location p {
   text-align: center;
   margin-bottom: 12px;
 }
-@media (min-width: 768px) {
+@media all and (min-width: 768px) {
   .introduction h2 {
     font-size: 40px;
     margin-bottom: 20px;
@@ -114,12 +179,12 @@ header .header__location p {
   padding: 50px 20px 70px 30px;
   background-color: white;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media all and (min-width: 768px) {
   .functioning {
     padding: 50px 50px 70px;
   }
 }
-@media (min-width: 1024px) {
+@media all and (min-width: 1024px) {
   .functioning {
     padding: 50px 180px 70px 180px;
   }
@@ -136,7 +201,7 @@ header .header__location p {
   gap: 25px;
   background-color: white;
 }
-@media (min-width: 768px) {
+@media all and (min-width: 768px) {
   .functioning__buttons {
     flex-direction: row;
     gap: 35px;
@@ -184,7 +249,6 @@ header .header__location p {
 
 .restaurants {
   padding: 50px 20px 70px;
-  background-color: #f6f6f6;
 }
 .restaurants h2 {
   margin-bottom: 20px;
@@ -199,7 +263,7 @@ header .header__location p {
   background-color: white;
   position: relative;
 }
-@media (min-width: 768px) {
+@media all and (min-width: 768px) {
   .restaurants__cards .card-menu {
     width: 45%;
   }
@@ -248,7 +312,7 @@ header .header__location p {
   font-size: 24px;
   font-weight: 100;
 }
-@media (min-width: 768px) {
+@media all and (min-width: 768px) {
   .restaurants__cards {
     flex-direction: row;
     justify-content: space-between;
@@ -256,73 +320,8 @@ header .header__location p {
     flex-wrap: wrap;
   }
 }
-@media (min-width: 1024px) {
+@media all and (min-width: 768px) {
   .restaurants {
     padding: 50px 180px 70px 180px;
   }
-}
-
-.footer {
-  padding: 20px;
-  background-color: #353535;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-@media (min-width: 768px) {
-  .footer {
-    flex-direction: row;
-    justify-content: center;
-    align-items: baseline;
-    gap: 40px;
-    padding: 50px 20px 30px;
-  }
-}
-@media (min-width: 1024px) {
-  .footer {
-    justify-content: flex-end;
-  }
-}
-.footer__logo {
-  font-family: "Shrikhand", cursive;
-  font-size: 18px;
-  font-weight: 400;
-  font-style: italic;
-  margin-bottom: 10px;
-}
-@media (min-width: 768px) {
-  .footer__logo {
-    order: 1;
-    margin: 0 40px;
-  }
-}
-.footer__links {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  font-size: 16px;
-  font-weight: 500;
-}
-@media (min-width: 1024px) {
-  .footer__links {
-    flex-direction: row;
-  }
-}
-.footer__info {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  font-size: 16px;
-  font-weight: 400;
-}
-@media (min-width: 1024px) {
-  .footer__info {
-    flex-direction: row;
-  }
-}
-.footer__link {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-}/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=main.css.map */

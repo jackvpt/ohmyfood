@@ -1,0 +1,41 @@
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    font-family: "Shrikhand", cursive;
+    height: 63px;
+    align-content: center;
+    color: #101010;
+
+    @include tablet-responsive {
+      height: 96px;
+    }
+  }
+
+  .header__location {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 17px;
+    height: 63px;
+    background-color: #eaeaea;
+    color: #353535;
+    box-shadow: 0px 4px 4px 0px #00000040;
+
+    @include tablet-responsive {
+      height: 50px;
+      box-shadow: none;
+    }
+
+    p {
+      font-size: 16px;
+      font-weight: 500;
+      background-color: #eaeaea;
+    }
+  }
+}
