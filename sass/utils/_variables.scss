@@ -1,30 +1,17 @@
+/* Fonts */
+$font_body: "Roboto", sans-serif;
+$font_title: "Shrikhand", cursive;
+
+
 /* Colors */
-$color-secondary: #ff79da;
-$color-tertiary: #99e2d0;
-$white: #ffffff;
-$shadow: #d5d5d5;
-
-$color_icon: #9356dc;
 $color_background: #f6f6f6;
-$color_red:red;
-
-// /* Gradient */
-// $gradient-loader: linear-gradient(
-//   to top,
-//   lighten($color-primary, 10%),
-//   $color-secondary,
-//   transparent,
-//   transparent
-// );
-
-// /* Degree Gradient */
-// $degree: 165deg;
-
-// /* Width */
-// $mainwidth: 90%;
-
-// /* Loading spinner animation delay */
-// $icons-delay: 610ms;
+$color_lightGreen: #99e2d0;
+$color_darkGreen: #008766;
+$color_lightBlue: #89c8fa;
+$color_darkBlue: #003a68;
+$color_pink:#ff79da;
+$color_purple: #9356dc;
+$color_grey: #353535;
 
 /* Responsive */
 $breakpoints: (

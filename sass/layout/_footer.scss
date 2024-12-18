@@ -1,6 +1,6 @@
 .footer {
   padding: 20px;
-  background-color: #353535;
+  background-color: $color_grey;
   color: white;
   display: flex;
   flex-direction: column;
@@ -19,7 +19,7 @@
   }
 
   &__logo {
-    font-family: "Shrikhand", cursive;
+    font-family: $font_title;
     font-size: 18px;
     font-weight: 400;
     font-style: italic;
@@ -59,5 +59,9 @@
     display: flex;
     flex-direction: row;
     gap: 10px;
+
+    i {
+      width: 18px;
+    }
   }
 }

@@ -5,7 +5,7 @@ header {
   align-items: center;
 
   h1 {
-    font-family: "Shrikhand", cursive;
+    font-family: $font_title;
     height: 63px;
     align-content: center;
     color: #101010;
@@ -24,7 +24,7 @@ header {
     gap: 17px;
     height: 63px;
     background-color: #eaeaea;
-    color: #353535;
+    color: $color_grey;
     box-shadow: 0px 4px 4px 0px #00000040;
 
     @include tablet-responsive {
