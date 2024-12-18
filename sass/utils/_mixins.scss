@@ -24,3 +24,9 @@
     @content;
   }
 }
+
+@mixin large-desktop-responsive {
+  @media all and (min-width: map-get($breakpoints, large-desktop)) {
+    @content;
+  }
+}

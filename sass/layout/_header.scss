@@ -3,9 +3,12 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: white;
 
   h1 {
     font-family: $font_title;
+    font-size: 30px;
+    font-weight: 400;
     height: 63px;
     align-content: center;
     color: #101010;
@@ -37,5 +40,28 @@ header {
       font-weight: 500;
       background-color: #eaeaea;
     }
+  }
+}
+
+.restaurant__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+
+  .fa-arrow-left {
+    position: absolute;
+    left: 30px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #353535;
+    font-size: 24px;
+  }
+
+  h1 {
+    flex: 1;
+    text-align: center;
   }
 }
