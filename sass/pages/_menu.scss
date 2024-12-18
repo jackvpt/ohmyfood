@@ -1,5 +1,4 @@
 .restaurant {
-  position: relative;
   background-color: white;
 
   &__picture img {
@@ -14,7 +13,9 @@
 
   &__menu {
     position: relative;
-    top: -40px;
+    z-index: 1;
+    margin-top: -40px;
+
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -24,7 +25,7 @@
     border-top-right-radius: 40px;
 
     @include desktop-responsive {
-      margin: 0 190px;
+      margin: -40px 190px 0;
     }
 
     &__title {
@@ -68,36 +69,94 @@
       }
 
       .dish {
+        position: relative;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
+        flex-direction: row;
+        justify-content: space-between;
+        overflow: hidden;
 
         height: 70px;
         border-radius: 15px;
         background-color: white;
-        padding: 0 20px;
+        padding: 0 0;
         gap: 5px;
 
-        h4 {
-          font-size: 18px;
-          font-weight: 500;
+        &:hover .dish__checkbox {
+          right: 0;
         }
-
-        h5 {
-          font-weight: 300;
-          font-size: 15px;
+        &:hover .dish__price {
+          right: 60px;
         }
 
         &__description {
           display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: flex-start;
+          gap: 5px;
+          margin-left: 20px;
+          padding: 15px 0;
+
+          h4 {
+            font-size: 18px;
+            font-weight: 500;
+            margin-right: 20px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+
+          h5 {
+            font-size: 15px;
+            font-weight: 300;
+            margin-right: 20px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+        }
+
+        &__right {
+          display: flex;
           flex-direction: row;
-          justify-content: space-between;
-          align-items: center;
+        }
+
+        &__price {
+          position: relative;
+          right:0;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          padding: 15px;
+
+          transition: right 0.8s ease;
 
           p {
             font-size: 15px;
             font-weight: 700;
             color: $color_grey;
+          }
+        }
+
+        &__checkbox {
+          position: absolute;
+          right: -100%;
+          width: 60px;
+          height: 100%;
+
+          align-content: center;
+          text-align: center;
+          font-size: 20px;
+          background-color: $color_lightGreen;
+          border-top-right-radius: 15px;
+          border-bottom-right-radius: 15px;
+
+          transition: right 0.8s ease;
+
+          .fa-circle-check {
+            background-color: white;
+            background-clip: text;
+            color: transparent;
           }
         }
       }
