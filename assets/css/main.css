@@ -78,6 +78,90 @@ html {
   opacity: 0;
 }
 
+.loader__modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 99;
+  background-color: #f6f6f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: disparition 3s forwards;
+}
+
+.loader__container {
+  width: 100px;
+  height: 100px;
+}
+@keyframes disparition {
+  0% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+.loader__container .loader__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.loader__container .loader__text img {
+  width: 70px;
+}
+.loader__container .spinner {
+  color: #9356dc;
+  font-size: 100px;
+  text-indent: -9999em;
+  overflow: hidden;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  position: relative;
+  transform: translateZ(0);
+  animation: mltShdSpin 1.7s infinite ease, round 1.7s infinite ease;
+}
+@keyframes mltShdSpin {
+  0% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+  5%, 95% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+  10%, 59% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em;
+  }
+  20% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em, -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em, -0.749em -0.34em 0 -0.477em;
+  }
+  38% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em, -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em, -0.82em -0.09em 0 -0.477em;
+  }
+  100% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+}
+@keyframes round {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 header {
   display: flex;
   flex-direction: column;
@@ -459,7 +543,6 @@ header .header__location p {
   border-bottom: 3px solid #99e2d0;
 }
 .restaurant__menu__dishes .dish {
-  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -467,23 +550,18 @@ header .header__location p {
   height: 70px;
   border-radius: 15px;
   background-color: white;
-  padding: 0 0;
   gap: 5px;
 }
-.restaurant__menu__dishes .dish:hover .dish__checkbox {
-  right: 0;
-}
-.restaurant__menu__dishes .dish:hover .dish__price {
-  right: 60px;
+.restaurant__menu__dishes .dish:hover .dish__right {
+  margin-right: 0;
 }
 .restaurant__menu__dishes .dish__description {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: flex-start;
   gap: 5px;
   margin-left: 20px;
-  padding: 15px 0;
 }
 .restaurant__menu__dishes .dish__description h4 {
   font-size: 18px;
@@ -504,15 +582,14 @@ header .header__location p {
 .restaurant__menu__dishes .dish__right {
   display: flex;
   flex-direction: row;
+  margin-right: -60px;
+  transition: margin-right 0.3s ease;
 }
 .restaurant__menu__dishes .dish__price {
-  position: relative;
-  right: 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 15px;
-  transition: right 0.8s ease;
+  padding: 10px 15px;
 }
 .restaurant__menu__dishes .dish__price p {
   font-size: 15px;
@@ -520,8 +597,6 @@ header .header__location p {
   color: #353535;
 }
 .restaurant__menu__dishes .dish__checkbox {
-  position: absolute;
-  right: -100%;
   width: 60px;
   height: 100%;
   align-content: center;
@@ -530,13 +605,13 @@ header .header__location p {
   background-color: #99e2d0;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  transition: right 0.8s ease;
 }
 .restaurant__menu__dishes .dish__checkbox .fa-circle-check {
   background-color: white;
   -webkit-background-clip: text;
           background-clip: text;
   color: transparent;
+  cursor: pointer;
 }
 .restaurant__menu .dish__order {
   text-align: center;

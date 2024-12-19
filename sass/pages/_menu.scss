@@ -69,7 +69,6 @@
       }
 
       .dish {
-        position: relative;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -78,24 +77,19 @@
         height: 70px;
         border-radius: 15px;
         background-color: white;
-        padding: 0 0;
         gap: 5px;
 
-        &:hover .dish__checkbox {
-          right: 0;
-        }
-        &:hover .dish__price {
-          right: 60px;
+        &:hover .dish__right {
+          margin-right: 0;
         }
 
         &__description {
           display: flex;
           flex-direction: column;
-          justify-content: space-around;
+          justify-content: center;
           align-items: flex-start;
-          gap: 5px;
+          gap:5px;
           margin-left: 20px;
-          padding: 15px 0;
 
           h4 {
             font-size: 18px;
@@ -119,17 +113,16 @@
         &__right {
           display: flex;
           flex-direction: row;
+          margin-right: -60px;
+          transition: margin-right 0.3s ease;
         }
 
         &__price {
-          position: relative;
-          right:0;
+
           display: flex;
           flex-direction: column;
           justify-content: flex-end;
-          padding: 15px;
-
-          transition: right 0.8s ease;
+          padding:10px 15px;
 
           p {
             font-size: 15px;
@@ -139,8 +132,6 @@
         }
 
         &__checkbox {
-          position: absolute;
-          right: -100%;
           width: 60px;
           height: 100%;
 
@@ -150,13 +141,12 @@
           background-color: $color_lightGreen;
           border-top-right-radius: 15px;
           border-bottom-right-radius: 15px;
-
-          transition: right 0.8s ease;
-
+          
           .fa-circle-check {
             background-color: white;
             background-clip: text;
             color: transparent;
+            cursor: pointer;
           }
         }
       }
