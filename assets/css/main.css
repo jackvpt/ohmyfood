@@ -306,6 +306,7 @@ header .header__location p {
   flex-direction: column;
   align-items: center;
   padding: 40px 20px;
+  background-color: #f6f6f6;
 }
 @media all and (min-width: 768px) {
   .introduction {
@@ -336,12 +337,12 @@ header .header__location p {
   padding: 50px 20px 70px 30px;
   background-color: white;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 1024px) {
   .functioning {
     padding: 50px 50px 70px;
   }
 }
-@media all and (min-width: 1024px) {
+@media all and (min-width: 1280px) {
   .functioning {
     padding: 50px 180px 70px 180px;
   }
@@ -358,7 +359,7 @@ header .header__location p {
   gap: 25px;
   background-color: white;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 1024px) {
   .functioning__buttons {
     flex-direction: row;
     gap: 35px;
@@ -406,6 +407,12 @@ header .header__location p {
 
 .restaurants {
   padding: 50px 20px 70px;
+  background-color: #f6f6f6;
+}
+@media all and (min-width: 1024px) {
+  .restaurants {
+    padding: 50px 180px 30px;
+  }
 }
 .restaurants h2 {
   margin-bottom: 20px;
@@ -415,12 +422,29 @@ header .header__location p {
   flex-direction: column;
   gap: 20px;
 }
+@media all and (min-width: 768px) {
+  .restaurants__cards {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+@media all and (min-width: 1024px) {
+  .restaurants__cards {
+    gap: 50px;
+  }
+}
 .restaurants__cards .card-menu {
   border-radius: 20px;
   background-color: white;
   position: relative;
 }
 @media all and (min-width: 768px) {
+  .restaurants__cards .card-menu {
+    width: 48%;
+  }
+}
+@media all and (min-width: 1024px) {
   .restaurants__cards .card-menu {
     width: 45%;
   }
@@ -463,19 +487,6 @@ header .header__location p {
 .restaurants__cards .card-menu__content h4 {
   font-size: 17px;
   font-weight: 300;
-}
-@media all and (min-width: 768px) {
-  .restaurants__cards {
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 30px;
-    flex-wrap: wrap;
-  }
-}
-@media all and (min-width: 768px) {
-  .restaurants {
-    padding: 50px 180px 70px 180px;
-  }
 }
 
 .restaurant {
