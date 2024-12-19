@@ -1,8 +1,11 @@
+/* Variables and mixins*/
 /* Fonts */
 /* Colors */
 /* Responsive */
 /* Gradient */
 /* Responsive */
+/* Animations */
+/* Base styles */
 * {
   font-family: "Roboto", sans-serif;
   box-sizing: border-box;
@@ -21,6 +24,7 @@ html {
   margin: 0 auto;
 }
 
+/* Components */
 .custom-button {
   padding: 0 20px;
   width: -moz-fit-content;
@@ -162,6 +166,7 @@ html {
   }
 }
 
+/* Layouts */
 header {
   display: flex;
   flex-direction: column;
@@ -295,6 +300,7 @@ header .header__location p {
   width: 18px;
 }
 
+/* Pages */
 .introduction {
   display: flex;
   flex-direction: column;
@@ -480,6 +486,7 @@ header .header__location p {
      object-fit: cover;
   width: 100%;
   height: 275px;
+  /* Responsive */
 }
 @media all and (min-width: 1024px) {
   .restaurant__picture img {
@@ -497,6 +504,7 @@ header .header__location p {
   padding: 30px 20px;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
+  /* Responsive */
 }
 @media all and (min-width: 1024px) {
   .restaurant__menu {
@@ -509,6 +517,7 @@ header .header__location p {
   justify-content: space-between;
   align-items: center;
   padding-right: 20px;
+  /* Responsive */
 }
 @media all and (min-width: 768px) {
   .restaurant__menu__title {
@@ -527,6 +536,50 @@ header .header__location p {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  /* Animation */
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+  /* Responsive */
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.restaurant__menu__dishes:nth-child(1) {
+  animation-delay: calc(0.5s * (1 - 1));
+}
+.restaurant__menu__dishes:nth-child(2) {
+  animation-delay: calc(0.5s * (2 - 1));
+}
+.restaurant__menu__dishes:nth-child(3) {
+  animation-delay: calc(0.5s * (3 - 1));
+}
+.restaurant__menu__dishes:nth-child(4) {
+  animation-delay: calc(0.5s * (4 - 1));
+}
+.restaurant__menu__dishes:nth-child(5) {
+  animation-delay: calc(0.5s * (5 - 1));
+}
+.restaurant__menu__dishes:nth-child(6) {
+  animation-delay: calc(0.5s * (6 - 1));
+}
+.restaurant__menu__dishes:nth-child(7) {
+  animation-delay: calc(0.5s * (7 - 1));
+}
+.restaurant__menu__dishes:nth-child(8) {
+  animation-delay: calc(0.5s * (8 - 1));
+}
+.restaurant__menu__dishes:nth-child(9) {
+  animation-delay: calc(0.5s * (9 - 1));
+}
+.restaurant__menu__dishes:nth-child(10) {
+  animation-delay: calc(0.5s * (10 - 1));
 }
 @media all and (min-width: 1280px) {
   .restaurant__menu__dishes {
@@ -560,10 +613,12 @@ header .header__location p {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  overflow: hidden;
   gap: 5px;
   margin-left: 20px;
 }
 .restaurant__menu__dishes .dish__description h4 {
+  width: 100%;
   font-size: 18px;
   font-weight: 500;
   margin-right: 20px;
@@ -572,6 +627,7 @@ header .header__location p {
   text-overflow: ellipsis;
 }
 .restaurant__menu__dishes .dish__description h5 {
+  width: 100%;
   font-size: 15px;
   font-weight: 300;
   margin-right: 20px;

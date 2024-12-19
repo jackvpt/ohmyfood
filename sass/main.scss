@@ -1,11 +1,19 @@
+/* Variables and mixins*/
 @import "utils/variables";
 @import "utils/mixins";
-// @import "utils/animations";
+
+/* Base styles */
 @import "base/typography";
+
+/* Components */
 @import "components/custom-button";
 @import "components/button-like";
-@import "components/spinner";
+@import "components/loader";
+
+/* Layouts */
 @import "layout/header";
 @import "layout/footer";
+
+/* Pages */
 @import "pages/index";
 @import "pages/menu";

@@ -6,6 +6,7 @@
     width: 100%;
     height: 275px;
 
+    /* Responsive */
     @include desktop-responsive {
       height: 380px;
     }
@@ -24,6 +25,7 @@
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
 
+    /* Responsive */
     @include desktop-responsive {
       margin: -40px 190px 0;
     }
@@ -35,6 +37,7 @@
       align-items: center;
       padding-right: 20px;
 
+      /* Responsive */
       @include tablet-responsive {
         justify-content: center;
         gap: 20px;
@@ -53,6 +56,15 @@
       flex-direction: column;
       gap: 10px;
 
+      /* Animation */
+      @include fadeIn();
+      @for $i from 1 through 10 {
+        &:nth-child(#{$i}) {
+          animation-delay: calc(0.5s * (#{$i} - 1));
+        }
+      }
+
+      /* Responsive */
       @include large-desktop-responsive {
         margin: 0 190px;
       }
@@ -73,7 +85,6 @@
         flex-direction: row;
         justify-content: space-between;
         overflow: hidden;
-
         height: 70px;
         border-radius: 15px;
         background-color: white;
@@ -88,19 +99,24 @@
           flex-direction: column;
           justify-content: center;
           align-items: flex-start;
-          gap:5px;
+          overflow: hidden;
+
+          gap: 5px;
           margin-left: 20px;
 
           h4 {
+            width: 100%;
             font-size: 18px;
             font-weight: 500;
             margin-right: 20px;
             white-space: nowrap;
             overflow: hidden;
+
             text-overflow: ellipsis;
           }
 
           h5 {
+            width: 100%;
             font-size: 15px;
             font-weight: 300;
             margin-right: 20px;
@@ -118,11 +134,10 @@
         }
 
         &__price {
-
           display: flex;
           flex-direction: column;
           justify-content: flex-end;
-          padding:10px 15px;
+          padding: 10px 15px;
 
           p {
             font-size: 15px;
@@ -141,7 +156,7 @@
           background-color: $color_lightGreen;
           border-top-right-radius: 15px;
           border-bottom-right-radius: 15px;
-          
+
           .fa-circle-check {
             background-color: white;
             background-clip: text;
