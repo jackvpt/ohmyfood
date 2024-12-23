@@ -1,33 +1,19 @@
-.button-like:hover .fa-regular {
-  opacity: 0;
-}
-.button-like:hover .fa-solid {
-  opacity: 1;
-}
 .button-like {
-  position: relative;
   width: 24px;
   height: 24px;
   font-size: 24px;
   font-weight: 100;
 
-  .fa-regular,
-  .fa-solid {
-    position: absolute;
-    top: 0;
-    left: 0;
-    cursor: pointer;
-    transition: opacity 0.3s ease;
-  }
-
   .fa-regular {
-    opacity: 1;
+    cursor: pointer;
+    transition: font-weight 0.3s ease color 0.3s ease;
   }
+}
 
-  .fa-solid {
-    background: linear-gradient(to top, #ff79da, #9356dc);
-    background-clip: text;
-    color: transparent;
-    opacity: 0;
-  }
+.button-like:hover .fa-regular {
+  background: linear-gradient(to top, #ff79da, #9356dc);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: 600;
 }
