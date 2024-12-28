@@ -58,14 +58,6 @@ html {
   cursor: pointer;
   transition: font-weight 0.3s ease color 0.3s ease;
 }
-@keyframes fillUp {
-  from {
-    height: 0;
-  }
-  to {
-    height: 100%;
-  }
-}
 
 .button-like:hover .fa-regular {
   background: linear-gradient(to top, #ff79da, #9356dc);
@@ -76,6 +68,14 @@ html {
   animation: fillUp 0.3s forwards;
 }
 
+@keyframes fillUp {
+  from {
+    height: 0;
+  }
+  to {
+    height: 100%;
+  }
+}
 .loader__modal {
   position: fixed;
   top: 0;
@@ -235,7 +235,7 @@ header .header__location p {
   .footer {
     flex-direction: row;
     justify-content: center;
-    align-items: baseline;
+    align-items: center;
     gap: 40px;
     padding: 50px 20px 30px;
   }

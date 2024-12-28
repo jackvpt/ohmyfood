@@ -47,13 +47,10 @@
   .spinner {
     color: $color_purple;
     font-size: 100px;
-    // text-indent: -9999em;
-    // overflow: hidden;
     width: 1em;
     height: 1em;
     border-radius: 50%;
     position: relative;
-    // transform: translateZ(0);
     animation: mltShdSpin 1.7s infinite ease, round 1.7s infinite ease;
   }
 
