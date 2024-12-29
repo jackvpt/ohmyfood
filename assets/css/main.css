@@ -46,6 +46,7 @@ html {
   cursor: pointer;
   background: linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%), linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.3490196078);
+  background-color: red;
 }
 
 .button-like {
@@ -104,6 +105,7 @@ html {
   100% {
     opacity: 0;
     display: none;
+    z-index:-1;
   }
 }
 .loader__container .loader__text {
