@@ -6,7 +6,6 @@
 
   .fa-regular {
     cursor: pointer;
-    transition: font-weight 0.3s ease, color 0.3s ease;
   }
 }
 
@@ -16,6 +15,7 @@
   -webkit-background-clip: text;
   color: transparent;
   font-weight: 600;
+  transition: font-weight 0.3s ease, color 0.3s ease;
   animation: fillUp 0.3s forwards;
 }
 
